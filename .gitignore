@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Council scratch — per-agent perspective files are ephemeral.
+# The synthesis is promoted to decisions/council/<NNN>-<slug>.md
+# before the session is deleted. See AGENTS.md → "Records and history".
+.council-temp/session_*/
