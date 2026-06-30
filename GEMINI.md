@@ -6,6 +6,10 @@
 
 ---
 
+## First run — set up the repo
+
+If the repo still has `<...>` placeholders (e.g. `<PRODUCT_NAME>`), it is a fresh template. Run the setup routine in `SETUP.md` (**Workflow 0**) before any council work. Setup is a main-thread interview + bulk edit run by the main agent — not a subagent job.
+
 ## The shared rule for both tools
 
 The council's whole value is **independent** lenses, then **one** synthesis by the main agent.

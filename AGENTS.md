@@ -1,6 +1,6 @@
 # AGENTS.md — AI Council Decision Workflows
 
-> **Template repo.** This is a reusable framework for running an "AI product council" over a living-docs repo. Replace the placeholders (`<PRODUCT_NAME>`, `<ONE_LINE_PITCH>`, and the example doc paths) with your own. See `README.md` → "Make it yours" for the full list.
+> **Template repo — run setup first.** Before you use the council, initialize the repo for your product. Run **Workflow 0 — Setup**: an agent interviews you (or reads a pitch / PRD you paste) and fills in the whole template — personas, docs, and the placeholders. See `SETUP.md` for the routine. (Prefer to fill it in by hand? The placeholder list is in `README.md` → "Make it yours".)
 
 This file is the **single source of truth** for how AI agents run the decision-making workflows in this repo. It is the cross-tool standard: **Claude Code**, **Gemini CLI**, **Antigravity**, and **Cursor** all read it. The thin per-tool files point back here:
 
@@ -58,6 +58,8 @@ Professional structure stays — formal headings, clear sections, neutral tone. 
 ## How a request flows — think first, then choose the output
 
 Every request goes through up to three stages. Cheap requests stop early; only real decisions reach the later stages. The key idea: **how hard you think (depth) and what record you write (output) are two separate choices.**
+
+> **Precondition — is the repo initialized?** If template placeholders like `<PRODUCT_NAME>` still appear in the repo, it has not been set up yet. Run **Workflow 0 — Setup** (see `SETUP.md`) before any council / PR/FAQ / ADR work — the council needs real product facts to reason well.
 
 ### Stage 1 — Triage (always; cheap)
 
@@ -121,6 +123,21 @@ The repo's memory is layered. Each layer has a different job — keeping them se
 - **Ephemeral scratch** (`.council-temp/session_<id>/`) — gitignored. Per-agent perspective files are deleted after the synthesis is written. Only the synthesis is promoted to a permanent file.
 
 **What NOT to keep:** session transcripts, agent reasoning logs, intermediate drafts. They age badly and the synthesis already captured the verdict.
+
+---
+
+## Workflow 0 — Setup (run once)
+
+Use this the first time you open a fresh clone of the template, or whenever the product changes a lot. The goal: replace every placeholder with real product facts so the lenses reason from truth, not from `<...>` tokens.
+
+Setup is a **main-thread routine** — an interview plus a bulk edit, not a council deliberation. In short:
+
+1. **Detect.** If `<PRODUCT_NAME>` still appears anywhere in the repo, it is not set up. Offer to run setup before any other workflow.
+2. **Interview.** Use the initializer prompt in `SETUP.md`. Ask in small batches. If the user pastes a pitch / PRD / link, read it first and ask only for what is missing.
+3. **Fill in.** Apply the fill-in map in `SETUP.md`: product name and pitch everywhere, the four persona Context blocks (and their Gemini mirrors), and the `docs/` skeleton. Add a 5th domain lens if the user wants one.
+4. **Finalize.** Remove the template banners, confirm no `<...>` tokens remain, and commit with `Setup: initialize council for <PRODUCT_NAME>`.
+
+The full question set, the fill-in map, and the finalize steps live in **`SETUP.md`**. Follow that file — this section is the pointer.
 
 ---
 

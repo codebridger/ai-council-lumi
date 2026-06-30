@@ -50,6 +50,7 @@ Every doc also adds one line to the Decision Log in `docs/README.md`.
 ## What is in this repo
 
 - `AGENTS.md` — the full rule book (read this first)
+- `SETUP.md` — the one-time setup routine (Workflow 0): an agent fills the template in for your product
 - `CLAUDE.md` — how to run the workflows in Claude Code
 - `GEMINI.md` — how to run them in Gemini CLI and Antigravity
 - `agents/` — the four council members (canonical persona files)
@@ -61,7 +62,9 @@ Every doc also adds one line to the Decision Log in `docs/README.md`.
 
 ## Make it yours
 
-This template uses a few placeholders. Search the repo for `<` and replace each one. The main ones:
+**The easy way — run setup.** The first time you open this repo, ask your agent to "set up the council" (or just start a council request — it will offer). The agent runs the initializer in `SETUP.md`: it interviews you, or reads a pitch / PRD you paste, and fills the whole template in — personas, docs, and the placeholders below — then commits. This is **Workflow 0** in `AGENTS.md`.
+
+**By hand (if you prefer).** The template uses a few placeholders. Search the repo for `<` and replace each one. The main ones:
 
 1. **`<PRODUCT_NAME>`** — your product or project name. Appears in `AGENTS.md`, the four `agents/*.md` files, and their `.gemini/agents/*.md` mirrors.
 2. **`<ONE_LINE_PITCH>`** — one line that says what the product is (in `AGENTS.md` → "What this repo is").
@@ -77,7 +80,7 @@ Optional, when you are ready:
 
 ## Quick start
 
-1. Clone the repo and do the "Make it yours" replacements above.
-2. Fill in the `docs/` skeleton with your real product docs.
+1. Clone the repo.
+2. **Run setup.** Ask your agent to "set up the council" (or just start a council request — it will offer). It interviews you, fills in your product facts and the `docs/` skeleton, and commits. See `SETUP.md`.
 3. Open `AGENTS.md` and try a request: ask the council a small strategic question, or draft a PR/FAQ from `templates/pr-faq-template.md`.
 4. Every decision gets a permanent file in `decisions/` and one line in the Decision Log in `docs/README.md`.

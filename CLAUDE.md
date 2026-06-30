@@ -8,6 +8,10 @@ Everything below is **only** the Claude-Code-specific way to run what `AGENTS.md
 
 ---
 
+## First run — set up the repo
+
+If the repo still has `<...>` placeholders (e.g. `<PRODUCT_NAME>`), it is a fresh template and not yet set up. Run the setup routine in `SETUP.md` (**Workflow 0**) before any council / PR/FAQ / ADR work — tell the user you'll initialize it first. Setup is a main-thread interview + bulk edit; no subagents needed.
+
 ## Spawning personas in Claude Code
 
 - The council personas live in `agents/*.md` (canonical source). Read the relevant persona file **verbatim** into the subagent prompt — never paraphrase.

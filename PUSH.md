@@ -40,6 +40,6 @@ The folder currently sits in a temporary outputs path. After the push, you can c
 git clone https://github.com/<your-account>/ai-council-template.git
 ```
 
-## Then make it yours
+## Then set it up
 
-Open `README.md` → "Make it yours" and replace the placeholders (`<PRODUCT_NAME>`, `<ONE_LINE_PITCH>`, the `Context:` blocks in `agents/*.md`, and the `docs/` skeleton).
+Open the repo and ask your agent to "set up the council". It runs the initializer in `SETUP.md` (Workflow 0) — interviews you (or reads a pitch / PRD you paste) and fills in the whole template for your product, then commits. (Prefer to do it by hand? See `README.md` → "Make it yours".)
