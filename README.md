@@ -4,6 +4,16 @@ A reusable framework for running an **AI product council** over a living-docs re
 
 This is a **template**. Clone it, fill in a few placeholders, and start your own product-docs repo. Nothing here is tied to one product.
 
+## Works with
+
+The same workflow files drive more than one agent tool, so the council runs the same way whichever you use:
+
+- **Claude Code** — the personas spawn as parallel `Task` subagents from `agents/*.md`. See `CLAUDE.md`.
+- **Gemini CLI** — the personas are native subagents in `.gemini/agents/*.md` (call them, or force one with `@product-manager`). See `GEMINI.md`.
+- **Antigravity** and **Cursor** — read `AGENTS.md` + the persona files directly; spawn each lens as its own agent. See `GEMINI.md`.
+
+`AGENTS.md` is the shared source of truth for every tool. The per-tool files (`CLAUDE.md`, `GEMINI.md`) only add *how to spawn agents* in that tool — they add no new rules. If you change a persona, update both `agents/<role>.md` and its Gemini mirror `.gemini/agents/<role>.md` so all tools stay in sync.
+
 ## The council
 
 The council is four AI agents. Each one looks at a question from one angle:
