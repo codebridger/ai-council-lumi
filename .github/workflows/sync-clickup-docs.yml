@@ -1,0 +1,53 @@
+name: Sync docs to ClickUp
+
+# Push to main -> reflect docs/ and decisions/ into a ClickUp Doc.
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "docs/**"
+      - "decisions/**"
+      - "scripts/sync_clickup_docs.py"
+      - ".github/workflows/sync-clickup-docs.yml"
+  workflow_dispatch: {}  # allow running it by hand from the Actions tab
+
+# Never let two syncs run at the same time.
+concurrency:
+  group: clickup-docs-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync docs to ClickUp
+        env:
+          # Secret — the ClickUp personal API token (starts with pk_).
+          CLICKUP_TOKEN: ${{ secrets.CLICKUP_TOKEN }}
+
+          # Variable — your ClickUp Workspace (team) id. It's the number in the app
+          # URL: app.clickup.com/9008123456/... -> 9008123456
+          CLICKUP_WORKSPACE_ID: ${{ vars.CLICKUP_WORKSPACE_ID }}
+
+          # Variable (recommended) — the id of the exact Doc to update every run.
+          # A "Doc" is one ClickUp document that holds many pages. Open the Doc in
+          # ClickUp; its id is the part of the URL after /dc/:
+          # app.clickup.com/9008123456/v/dc/86a1x2yz-9 -> 86a1x2yz-9
+          CLICKUP_DOC_ID: ${{ vars.CLICKUP_DOC_ID }}
+
+          # Variable (optional) — used ONLY when CLICKUP_DOC_ID is empty. It's just
+          # the Doc's title: the workflow looks for a Doc with this name and, if it
+          # finds none, creates one. Defaults to "Product Documentation" when unset.
+          CLICKUP_DOC_NAME: ${{ vars.CLICKUP_DOC_NAME }}
+        run: python3 scripts/sync_clickup_docs.py

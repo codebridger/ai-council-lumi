@@ -12,6 +12,10 @@ yarn.lock
 dist/
 *.tsbuildinfo
 
+# Python cache (scripts/)
+__pycache__/
+*.pyc
+
 # IDE
 .vscode/
 .idea/
