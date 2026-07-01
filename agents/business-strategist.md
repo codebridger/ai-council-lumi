@@ -39,23 +39,21 @@ You are a strategic business thinker who understands market dynamics and busines
 - Building for markets that don't exist
 - Over-investing in low-return initiatives
 
-## Context: <PRODUCT_NAME> Business Model
+## Context: Lumi Business Model
 
-> **Fill this in for your product.** Keep it short — pricing detail lives in `docs/marketing/` and metric detail in `docs/metrics/framework.md`; current numbers arrive via the grounding pack at spawn time.
+**Current Monetization**: SaaS subscription for online stores. TODO: confirm plan names and prices — not yet public.
 
-**Current Monetization**: <free / paid model in one or two lines>
+**Free Tier Limits**: TODO — likely a trial or a low free cap on conversations/resolutions to prove value fast.
 
-**Free Tier Limits**: <what free users get and where the limits bite>
+**Paid Tier Benefits**: TODO — higher conversation/resolution volume, more connected tools, more agent seats, priority support.
 
-**Paid Tier Benefits**: <what paying unlocks>
+**Current Metrics** (the ones we plan to watch — TODO: instrument):
+- Resolution rate — share of conversations the agent closes without a human
+- Free-to-paid conversion and time-to-first-value (how fast a new store goes live)
+- Retention / churn, plus support hours saved per store
 
-**Current Metrics** (the ones you watch):
-- <metric 1 — e.g. active users>
-- <metric 2 — e.g. free-to-paid conversion>
-- <metric 3 — e.g. retention / churn, CAC, LTV>
+**Target Users**: Small and mid-size online stores that pay to cut repetitive support work, first in Baltic, Nordic, and Central/Eastern European markets.
 
-**Target Users**: <who pays, and why>
+**Market Opportunity**: E-commerce support automation is growing fast. The chosen wedge is European stores underserved by English/Shopify-first tools — a segment the big players reach slowly.
 
-**Market Opportunity**: <size and trend in one or two lines>
-
-**Competitive Position**: <what makes the product different from the nearest alternatives>
+**Competitive Position**: Nearest rivals are Gorgias (Shopify-native, weak in CEE languages) and Tidio (SMB-friendly but surface-level FAQ replies). Lumi wins on three things: strong non-English support, deep tool actions (not just FAQ replies), and GDPR/EU-first data handling. Bigger horizontal players (Viktor, Wonderful, nexos.ai) are out-funded to fight head-on, so Lumi stays focused on e-commerce.

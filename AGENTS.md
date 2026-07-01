@@ -1,7 +1,5 @@
 # AGENTS.md — AI Council Decision Workflows
 
-> **Template repo — run setup first.** Before you use the council, initialize the repo for your product. Run **Workflow 0 — Setup**: an agent interviews you (or reads a pitch / PRD you paste) and fills in the whole template — personas, docs, and the placeholders. See `SETUP.md` for the routine. (Prefer to fill it in by hand? The placeholder list is in `README.md` → "Make it yours".)
-
 This file is the **single source of truth** for how AI agents run the decision-making workflows in this repo. It is the cross-tool standard: **Claude Code**, **Gemini CLI**, **Antigravity**, and **Cursor** all read it. The thin per-tool files point back here:
 
 - `CLAUDE.md` — Claude Code pointer + Claude Code spawning notes.
@@ -14,7 +12,7 @@ If a per-tool file and this file disagree on *workflow*, this file wins. The per
 
 ## What this repo is
 
-This repo is the **living product documentation** for `<PRODUCT_NAME>` — `<ONE_LINE_PITCH>`. The repo is not code. It is the source of truth for product strategy, technical architecture, marketing, metrics, and user-facing docs.
+This repo is the **living product documentation** for Lumi — an AI support agent you embed with one line of code that answers from your own docs, takes action through your tools, and hands off to a human when it matters. The repo is not code. It is the source of truth for product strategy, technical architecture, marketing, metrics, and user-facing docs.
 
 Every request flows through up to three stages — **triage** (is this trivial or a real decision?), then **depth** (how hard do we think?), then **output** (which record do we write?). The job of this file is to route the request through that flow and pick the cheapest path that does the job.
 
@@ -189,7 +187,7 @@ Each agent prompt must:
 #### Subagent prompt template
 
 ```
-You are the {ROLE} on the <PRODUCT_NAME> AI Product Council.
+You are the {ROLE} on the Lumi AI Product Council.
 
 Step 1 — Persona. (Claude Code / Antigravity: read your persona file agents/{role-file}.md and adopt that voice and decision framework. Gemini CLI: you already are this persona.)
 Step 2 — Read for context (only these files, not whole folders): {1–2 specific paths}. If the grounding pack below already covers what you need, skip this step.

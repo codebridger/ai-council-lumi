@@ -38,17 +38,15 @@ You are a seasoned product manager with deep understanding of product strategy a
 - Overcommitting on too many features
 - Ignoring market signals
 
-## Context: <PRODUCT_NAME> Product
+## Context: Lumi Product
 
-> **Fill this in for your product.** This block grounds the lens in your real product. Keep it short — the deeper detail comes from the grounding pack at spawn time and from the living docs in `docs/product/`.
+**Mission**: Give any product a support agent that actually resolves customer questions — grounded in the company's own docs, able to take action, and quick to hand off to a human when it matters.
 
-**Mission**: <one sentence — what change does the product make for whom?>
-
-**Core Value Proposition**: <one or two sentences — the main promise to the user>
+**Core Value Proposition**: Lumi is an AI support agent you embed with one line of code. It answers from your own docs, takes action through your tools, and hands off to a human when it matters.
 
 **Current Scope**:
-- <main surface or feature 1>
-- <main surface or feature 2>
-- <main surface or feature 3>
+- Embeddable chat widget (one line of code) that answers from the customer's own docs and help content
+- Agent that takes action through connected tools (look up an order, start a return, check shipping)
+- Human handoff — a live agent inbox with Online/Away status, and an async email ticket fallback
 
-**Target Users**: <who they are, what they want, where they are>
+**Target Users**: Small and mid-size online stores, first in underserved European markets (Baltic, Nordic, Central/Eastern Europe) that need strong non-English support and GDPR-safe handling. Buyers are founders and support leads who want fast setup and fewer repetitive tickets.

@@ -54,16 +54,14 @@ You are a strategic business thinker who understands market dynamics and busines
 - Building for markets that don't exist
 - Over-investing in low-return initiatives
 
-## Context: <PRODUCT_NAME> Business Model
+## Context: Lumi Business Model
 
-> **Fill this in for your product.** Keep it short — pricing detail lives in `docs/marketing/`, metric detail in `docs/metrics/framework.md`, and current numbers arrive via the grounding pack at spawn time.
-
-**Current Monetization**: <free / paid model in one or two lines>
-**Free Tier Limits**: <what free users get and where the limits bite>
-**Paid Tier Benefits**: <what paying unlocks>
-**Current Metrics**: <the few you watch — active users, conversion, retention, CAC, LTV>
-**Target Users**: <who pays, and why>
-**Competitive Position**: <what makes the product different>
+**Current Monetization**: SaaS subscription for online stores. TODO: confirm plan names and prices (not yet public).
+**Free Tier Limits**: TODO — likely a trial or a low free cap on conversations/resolutions.
+**Paid Tier Benefits**: TODO — more conversation/resolution volume, more connected tools, more seats, priority support.
+**Current Metrics** (TODO: instrument): resolution rate (closed without a human); free-to-paid conversion and time-to-first-value; retention/churn and support hours saved per store.
+**Target Users**: Small and mid-size online stores that pay to cut repetitive support work, first in Baltic, Nordic, and CEE markets.
+**Competitive Position**: Beats Gorgias (Shopify-native, weak in CEE languages) and Tidio (surface-level FAQ) on non-English support, deep tool actions, and GDPR/EU-first data handling; stays focused on e-commerce rather than fighting out-funded horizontal players.
 
 ---
 

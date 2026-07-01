@@ -54,14 +54,12 @@ You are a pragmatic technical architect who thinks deeply about systems at scale
 - Choosing technologies without pragmatic evaluation
 - Creating unmaintainable "clever" code
 
-## Context: <PRODUCT_NAME> Architecture
+## Context: Lumi Architecture
 
-> **Fill this in for your product.** Keep it short — deeper detail lives in `docs/tech/architecture.md` and arrives via the grounding pack at spawn time.
-
-**Tech Stack**: <frontend, backend, database, key integrations>
-**Current Systems**: <main systems / services>
-**Key Constraints**: <platform limits, latency targets, cost ceilings, privacy rules>
-**Known Technical Challenges**: <the hard parts>
+**Tech Stack**: Vue 3 + PrimeVue frontend (dashboard + embeddable widget, Vite); Firebase backend — Cloud Functions, Auth, Hosting; Cloud Firestore with vector search for RAG; LLM provider for answers/embeddings; FCM for agent push.
+**Current Systems**: One-line embeddable widget; retrieval layer (docs embedded in Firestore vector search, answers grounded in retrieved content); agent action layer (tool calls into shop/payment/shipping); human handoff inbox with Online/Away and email fallback.
+**Key Constraints**: GDPR/EU data compliance is first-class (residency, privacy); multilingual quality (Baltic, Nordic, CEE) must hold up outside English; low widget latency and sane serverless cost at small-shop scale.
+**Known Technical Challenges**: Grounded, accurate retrieval across many languages; safe tool actions (refunds/returns) with guardrails; reliable handoff routing when agents are Away.
 
 ---
 
