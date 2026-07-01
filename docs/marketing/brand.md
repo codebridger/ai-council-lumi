@@ -3,10 +3,16 @@
 > Living doc. How we talk about the product and how we price it. Changing this doc is a council-level change (see `AGENTS.md` → "Editing rules for living docs").
 
 ## One-line pitch
-Lumi gives your product an AI support agent that answers from your own docs, takes action through your tools, and hands off to a human when it matters — embedded with one line of code.
+Lumi gives your product an AI support agent that answers from your own docs, takes action through your tools, and hands off to a human when it matters — embedded with one line of code. It also lets you hire AI agents that run a whole job on their own.
+
+Lumi has two product lines:
+- **Lumi ChatBot** — an embeddable AI support widget (Gemini answers, your knowledge base, MCP bug reports, human handoff).
+- **Lumi Hireable Agents** — "AI employees" you hire that run as isolated, runnable jobs in their own container.
 
 ## Positioning
-For small and mid-size online stores — first in Baltic, Nordic, and Central/Eastern European markets — Lumi replaces slow, repetitive manual support and shallow FAQ bots. Unlike Gorgias (Shopify-native, weak in CEE languages) and Tidio (SMB-friendly but surface-level FAQ replies), Lumi answers well in non-English languages, takes real action through connected tools instead of just replying, and is GDPR/EU-first by design. It stays focused on e-commerce support rather than the broad, out-funded "AI coworker" market.
+**Lumi ChatBot.** For small and mid-size online stores — first in Baltic, Nordic, and Central/Eastern European markets — the ChatBot replaces slow, repetitive manual support and shallow FAQ bots. Unlike Gorgias (Shopify-native, weak in CEE languages) and Tidio (SMB-friendly but surface-level FAQ replies), it answers well in non-English languages, takes real action through connected tools instead of just replying, and is GDPR/EU-first by design.
+
+**Lumi Hireable Agents.** For teams that want an AI that owns a whole job — a coworker, not a chatbot. It competes in the "AI employees" space (players like Viktor, Superpal, nexos.ai, Wonderful) on being simple, fast, and easy to hire, with EU-first data handling. TODO: sharpen this positioning once the design doc and first job are set.
 
 ## Voice & tone
 Plain, clear, and helpful. Sound like a calm expert, not a hype machine.

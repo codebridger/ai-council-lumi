@@ -42,11 +42,10 @@ You are a seasoned product manager with deep understanding of product strategy a
 
 **Mission**: Give any product a support agent that actually resolves customer questions — grounded in the company's own docs, able to take action, and quick to hand off to a human when it matters.
 
-**Core Value Proposition**: Lumi is an AI support agent you embed with one line of code. It answers from your own docs, takes action through your tools, and hands off to a human when it matters.
+**Core Value Proposition**: An AI support and "AI employee" platform with two product lines that share one core (Firebase + Vue, Gemini, a knowledge base): (1) **Lumi ChatBot** — an embeddable support agent added with one line of code, and (2) **Lumi Hireable Agents** — "AI employees" you hire that run a whole job on their own.
 
 **Current Scope**:
-- Embeddable chat widget (one line of code) that answers from the customer's own docs and help content
-- Agent that takes action through connected tools (look up an order, start a return, check shipping)
-- Human handoff — a live agent inbox with Online/Away status, and an async email ticket fallback
+- **ChatBot**: embeddable chat widget; Gemini answers from the customer's own knowledge base; tool actions (order lookup, returns, shipping); MCP bug reports; human handoff with Online/Away and an email ticket fallback.
+- **Hireable Agents**: an agent you hire that runs as an isolated, runnable job/container. First job and scope TODO (from the internal design doc).
 
-**Target Users**: Small and mid-size online stores, first in underserved European markets (Baltic, Nordic, Central/Eastern Europe) that need strong non-English support and GDPR-safe handling. Buyers are founders and support leads who want fast setup and fewer repetitive tickets.
+**Target Users**: ChatBot — small and mid-size online stores, first in underserved European markets (Baltic, Nordic, CEE) that need strong non-English support and GDPR-safe handling; buyers are founders and support leads. Hireable Agents — teams that want to hire an AI to own a repeatable job (first buyer/job TODO).

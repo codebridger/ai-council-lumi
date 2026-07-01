@@ -41,24 +41,30 @@ You are a pragmatic technical architect who thinks deeply about systems at scale
 
 ## Context: Lumi Architecture
 
+Two product lines share a common core (Firebase + Vue, Gemini, knowledge base): the **ChatBot** (embeddable support widget) and **Hireable Agents** (isolated job/container).
+
 **Tech Stack**:
-- Frontend: Vue 3 + PrimeVue (agent dashboard and embeddable widget), built with Vite
+- Frontend: Vue 3 + PrimeVue (TypeScript) — agent dashboard and embeddable widget, built with Vite
 - Backend: Firebase — Cloud Functions (serverless), Firebase Auth, Firebase Hosting
-- Database: Cloud Firestore, using its vector search for document embeddings (RAG)
-- Key integrations: an LLM provider for answers and embeddings; Firebase Cloud Messaging (FCM) for agent push notifications; shop, payment, and shipping systems for tool actions
+- Database: Cloud Firestore, using its vector search for the knowledge-base embeddings (RAG)
+- Key integrations: Gemini for answers/embeddings; MCP for tool actions and bug reports; FCM for agent push; shop, payment, and shipping systems for tool actions
+- Hireable Agents run in their own container (runtime/orchestration TODO — from the design doc)
 
 **Current Systems**:
-- Embeddable widget — a one-line JS snippet the customer drops into their site
-- Retrieval layer — customer docs chunked, embedded, and stored in Firestore vector search; answers are grounded in retrieved content
-- Agent action layer — tool/function calls into connected shop, payment, and shipping systems
+- ChatBot widget — a one-line JS snippet the customer drops into their site
+- Retrieval layer — customer docs chunked, embedded, and stored in Firestore vector search; Gemini answers grounded in retrieved content
+- Agent action layer — tool/function calls into connected shop/payment/shipping systems, plus MCP-based bug reporting
 - Human handoff — a live inbox with Online/Away agent status, FCM push, and an email ticket fallback
+- Hireable Agent runner — each hired agent runs as an isolated, runnable job/container (details TODO)
 
 **Key Constraints**:
 - GDPR / EU data compliance is a first-class requirement, not an add-on — data residency and privacy shape the design
 - Multilingual quality matters (Baltic, Nordic, CEE languages), so retrieval and answers must hold up outside English
-- Low answer latency in the widget; serverless cost must stay sane at small-shop scale
+- Low answer latency in the widget; serverless and per-job container cost must stay sane at small-shop scale
+- Each Hireable Agent job must run isolated from others (security and blast-radius)
 
 **Known Technical Challenges**:
 - Keeping retrieval accurate and answers grounded across many languages
 - Safe tool actions (refunds, returns) — guardrails so the agent does not take a wrong action
 - Reliable handoff routing when agents are Away (fallback to the email ticket)
+- Container/job model for Hireable Agents — keep it simple, isolated, and cheap (design doc pending)

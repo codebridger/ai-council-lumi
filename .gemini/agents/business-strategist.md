@@ -60,8 +60,8 @@ You are a strategic business thinker who understands market dynamics and busines
 **Free Tier Limits**: TODO — likely a trial or a low free cap on conversations/resolutions.
 **Paid Tier Benefits**: TODO — more conversation/resolution volume, more connected tools, more seats, priority support.
 **Current Metrics** (TODO: instrument): resolution rate (closed without a human); free-to-paid conversion and time-to-first-value; retention/churn and support hours saved per store.
-**Target Users**: Small and mid-size online stores that pay to cut repetitive support work, first in Baltic, Nordic, and CEE markets.
-**Competitive Position**: Beats Gorgias (Shopify-native, weak in CEE languages) and Tidio (surface-level FAQ) on non-English support, deep tool actions, and GDPR/EU-first data handling; stays focused on e-commerce rather than fighting out-funded horizontal players.
+**Target Users**: ChatBot — small/mid-size online stores that pay to cut repetitive support work, first in Baltic, Nordic, and CEE markets. Hireable Agents — teams that want to hire an AI to own a repeatable job (first buyer/job TODO).
+**Competitive Position**: Two fronts. ChatBot (Path B) beats Gorgias (Shopify-native, weak in CEE languages) and Tidio (surface-level FAQ) on non-English support, deep tool actions, and GDPR/EU-first data. Hireable Agents (Path A) compete with better-funded Viktor, Superpal, nexos.ai, Wonderful — win on simple, fast-to-hire, EU-first, not on spend. Risk: splitting a small team across two fronts.
 
 ---
 

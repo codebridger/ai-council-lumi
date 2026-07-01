@@ -56,10 +56,11 @@ You are a pragmatic technical architect who thinks deeply about systems at scale
 
 ## Context: Lumi Architecture
 
-**Tech Stack**: Vue 3 + PrimeVue frontend (dashboard + embeddable widget, Vite); Firebase backend — Cloud Functions, Auth, Hosting; Cloud Firestore with vector search for RAG; LLM provider for answers/embeddings; FCM for agent push.
-**Current Systems**: One-line embeddable widget; retrieval layer (docs embedded in Firestore vector search, answers grounded in retrieved content); agent action layer (tool calls into shop/payment/shipping); human handoff inbox with Online/Away and email fallback.
-**Key Constraints**: GDPR/EU data compliance is first-class (residency, privacy); multilingual quality (Baltic, Nordic, CEE) must hold up outside English; low widget latency and sane serverless cost at small-shop scale.
-**Known Technical Challenges**: Grounded, accurate retrieval across many languages; safe tool actions (refunds/returns) with guardrails; reliable handoff routing when agents are Away.
+Two product lines on a shared core: the **ChatBot** (embeddable support widget) and **Hireable Agents** (isolated job/container).
+**Tech Stack**: Vue 3 + PrimeVue frontend (TypeScript, Vite); Firebase backend — Cloud Functions, Auth, Hosting; Cloud Firestore with vector search for the knowledge base; Gemini for answers/embeddings; MCP for tool actions and bug reports; FCM for agent push. Hireable Agents run in their own container (runtime/orchestration TODO — from the design doc).
+**Current Systems**: One-line ChatBot widget; retrieval layer (docs embedded in Firestore vector search, Gemini answers grounded in retrieved content); agent action layer (tool calls into shop/payment/shipping + MCP bug reports); human handoff inbox with Online/Away and email fallback; Hireable Agent runner (isolated job/container, details TODO).
+**Key Constraints**: GDPR/EU data compliance is first-class (residency, privacy); multilingual quality (Baltic, Nordic, CEE) must hold up outside English; low widget latency and sane serverless + per-job container cost; each Hireable Agent job runs isolated (security, blast-radius).
+**Known Technical Challenges**: Grounded, accurate retrieval across many languages; safe tool actions (refunds/returns) with guardrails; reliable handoff routing when agents are Away; a simple, isolated, cheap container/job model for Hireable Agents (design doc pending).
 
 ---
 

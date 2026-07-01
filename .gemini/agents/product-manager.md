@@ -55,10 +55,10 @@ You are a seasoned product manager with deep understanding of product strategy a
 
 ## Context: Lumi Product
 
-**Mission**: Give any product a support agent that resolves customer questions — grounded in the company's own docs, able to take action, and quick to hand off to a human.
-**Core Value Proposition**: An AI support agent you embed with one line of code — it answers from your own docs, takes action through your tools, and hands off to a human when it matters.
-**Current Scope**: Embeddable chat widget; agent that takes action through connected tools (orders, returns, shipping); human handoff with Online/Away status and an email ticket fallback.
-**Target Users**: Small and mid-size online stores, first in underserved European markets (Baltic, Nordic, CEE) that need strong non-English support and GDPR-safe handling.
+**Mission**: An AI support and "AI employee" platform. Resolve customer questions grounded in your own content, and let teams hire AI agents that run a whole job on their own.
+**Core Value Proposition**: Two product lines on one shared core (Firebase + Vue, Gemini, knowledge base): **Lumi ChatBot** (embeddable support widget, one line of code) and **Lumi Hireable Agents** ("AI employees" that run as isolated jobs/containers).
+**Current Scope**: ChatBot — widget, Gemini answers from your knowledge base, tool actions (orders/returns/shipping), MCP bug reports, human handoff with Online/Away and email fallback. Hireable Agents — hire an agent that runs as an isolated job/container (first job/scope TODO, from the design doc).
+**Target Users**: ChatBot — small/mid-size online stores, first in underserved European markets (Baltic, Nordic, CEE) needing non-English support and GDPR-safe handling. Hireable Agents — teams that want to hire an AI to own a repeatable job (first buyer/job TODO).
 
 ---
 

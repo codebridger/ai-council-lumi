@@ -52,8 +52,8 @@ You are a strategic business thinker who understands market dynamics and busines
 - Free-to-paid conversion and time-to-first-value (how fast a new store goes live)
 - Retention / churn, plus support hours saved per store
 
-**Target Users**: Small and mid-size online stores that pay to cut repetitive support work, first in Baltic, Nordic, and Central/Eastern European markets.
+**Target Users**: ChatBot — small and mid-size online stores that pay to cut repetitive support work, first in Baltic, Nordic, and CEE markets. Hireable Agents — teams that want to hire an AI to own a repeatable job (first buyer/job TODO).
 
-**Market Opportunity**: E-commerce support automation is growing fast. The chosen wedge is European stores underserved by English/Shopify-first tools — a segment the big players reach slowly.
+**Market Opportunity**: Two markets. (1) E-commerce support automation — the near-term wedge is European stores underserved by English/Shopify-first tools. (2) "AI employees" / horizontal agents — larger but more crowded and better-funded.
 
-**Competitive Position**: Nearest rivals are Gorgias (Shopify-native, weak in CEE languages) and Tidio (SMB-friendly but surface-level FAQ replies). Lumi wins on three things: strong non-English support, deep tool actions (not just FAQ replies), and GDPR/EU-first data handling. Bigger horizontal players (Viktor, Wonderful, nexos.ai) are out-funded to fight head-on, so Lumi stays focused on e-commerce.
+**Competitive Position**: Two fronts. **ChatBot (Path B)** — beats Gorgias (Shopify-native, weak in CEE languages) and Tidio (surface-level FAQ) on non-English support, deep tool actions, and GDPR/EU-first data. **Hireable Agents (Path A)** — competes with Viktor, Superpal, nexos.ai, and Wonderful; these are better-funded, so Lumi must win on being simple, fast to hire, and EU-first rather than out-spending them. Watch the risk of splitting a small team across two fronts.
