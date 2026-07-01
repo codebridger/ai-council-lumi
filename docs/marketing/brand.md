@@ -20,7 +20,15 @@ Plain, clear, and helpful. Sound like a calm expert, not a hype machine.
 - **Don't**: over-promise, lean on buzzwords, or bury the point in jargon.
 
 ## Pricing
-TODO: not yet public. Fill in the plans, what each unlocks, and the prices once decided. Keep this the single source of truth for price. Competitor models to weigh: subscription (Gorgias), per-conversation (Tidio, Decagon), per-resolution (Sierra). Small shops respond to simple pricing at small-shop scale.
+Keep this the single source of truth for price.
+
+**Lumi Hireable Agents** — a usage-based subscription, shaped like Anthropic's and OpenAI's plans:
+- You subscribe to a plan and can define as many agents as you want.
+- Each plan gives a limited **time and token window** per period. Agent activity goes through a **queue** and runs one by one inside that window.
+- When agents hit the limit, owners can **top up** to boost throughput and keep work moving.
+- Exact plan tiers, prices, and window sizes: TODO.
+
+**Lumi ChatBot** — pricing not set yet (TODO). It may reuse the same subscription + top-up shape or use a support-style model. Competitor models to weigh: subscription (Gorgias), per-conversation (Tidio, Decagon), per-resolution (Sierra). Small shops respond to simple pricing at small-shop scale.
 
 ## Key messages
 1. **Resolves, not just replies** — Lumi takes action through your tools, it doesn't just answer FAQs.

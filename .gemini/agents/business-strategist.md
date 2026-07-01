@@ -56,9 +56,9 @@ You are a strategic business thinker who understands market dynamics and busines
 
 ## Context: Lumi Business Model
 
-**Current Monetization**: SaaS subscription for online stores. TODO: confirm plan names and prices (not yet public).
-**Free Tier Limits**: TODO — likely a trial or a low free cap on conversations/resolutions.
-**Paid Tier Benefits**: TODO — more conversation/resolution volume, more connected tools, more seats, priority support.
+**Current Monetization**: Hireable Agents use a usage-based subscription shaped like Anthropic's/OpenAI's — subscribe, define as many agents as you want, but activity runs through a queue within a limited time and token window per period, with a top-up to boost when limited. ChatBot pricing not set (may reuse the same shape or a support-style model). Tiers/prices TODO.
+**Free Tier Limits**: TODO — small time/token window (agents) or low free conversation cap (ChatBot).
+**Paid Tier Benefits**: TODO — bigger time/token window, more throughput, top-ups; ChatBot: more resolutions, tools, seats.
 **Current Metrics** (TODO: instrument): resolution rate (closed without a human); free-to-paid conversion and time-to-first-value; retention/churn and support hours saved per store.
 **Target Users**: ChatBot — small/mid-size online stores that pay to cut repetitive support work, first in Baltic, Nordic, and CEE markets. Hireable Agents — teams that want to hire an AI to own a repeatable job (first buyer/job TODO).
 **Competitive Position**: Two fronts. ChatBot (Path B) beats Gorgias (Shopify-native, weak in CEE languages) and Tidio (surface-level FAQ) on non-English support, deep tool actions, and GDPR/EU-first data. Hireable Agents (Path A) compete with better-funded Viktor, Superpal, nexos.ai, Wonderful — win on simple, fast-to-hire, EU-first, not on spend. Risk: splitting a small team across two fronts.

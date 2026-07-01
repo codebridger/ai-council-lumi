@@ -22,13 +22,17 @@ Lumi runs two product tracks. They share a core (Firebase, Vue, Gemini, knowledg
 ## Track B — Lumi Hireable Agents (AI employees)
 
 ### Now (in progress)
-- First hireable agent that runs as an isolated, runnable job/container. TODO: confirm the first job, trigger model, and scope from the internal design doc.
+- Core agent that takes input from a channel, uses MCPs to do work, and delivers a result.
+- **Task Board** — the default place agents and people work together by assigning tasks to each other.
+- Isolated, queued runs within a time/token window. TODO: confirm the first job and buyer.
 
 ### Next
-- TODO: pending the design doc.
+- More **collaboration environments**: connect Slack, ClickUp, Telegram, and other task managers/messengers.
+- Subscription + top-up billing for the time/token window.
 
 ### Later
-- TODO: pending the design doc.
+- A library of agent traits/tools so owners can shape what an agent can do.
+- TODO: expand as the design firms up.
 
 ## Shipped
 _Nothing logged yet._

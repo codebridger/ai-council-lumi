@@ -41,11 +41,11 @@ You are a strategic business thinker who understands market dynamics and busines
 
 ## Context: Lumi Business Model
 
-**Current Monetization**: SaaS subscription for online stores. TODO: confirm plan names and prices — not yet public.
+**Current Monetization**: Hireable Agents use a usage-based subscription shaped like Anthropic's/OpenAI's: subscribe to a plan, define as many agents as you want, but activity runs through a queue within a limited time and token window per period, with a top-up to boost when limited. ChatBot pricing is not set yet (may reuse the same shape or a support-style model). Plan tiers and prices: TODO.
 
-**Free Tier Limits**: TODO — likely a trial or a low free cap on conversations/resolutions to prove value fast.
+**Free Tier Limits**: TODO — likely a small time/token window (agents platform) or a low free conversation cap (ChatBot) to prove value fast.
 
-**Paid Tier Benefits**: TODO — higher conversation/resolution volume, more connected tools, more agent seats, priority support.
+**Paid Tier Benefits**: TODO — bigger time/token window, more throughput, top-ups; for ChatBot, more resolutions, connected tools, and seats.
 
 **Current Metrics** (the ones we plan to watch — TODO: instrument):
 - Resolution rate — share of conversations the agent closes without a human

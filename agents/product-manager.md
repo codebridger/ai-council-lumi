@@ -46,6 +46,6 @@ You are a seasoned product manager with deep understanding of product strategy a
 
 **Current Scope**:
 - **ChatBot**: embeddable chat widget; Gemini answers from the customer's own knowledge base; tool actions (order lookup, returns, shipping); MCP bug reports; human handoff with Online/Away and an email ticket fallback.
-- **Hireable Agents**: an agent you hire that runs as an isolated, runnable job/container. First job and scope TODO (from the internal design doc).
+- **Hireable Agents**: agents that take input from any channel, use MCPs to do work, and deliver results to a destination. Agents and people coordinate on a **Task Board** (assign a task to an agent or a person), and agents can also work in owner-connected channels (Slack, ClickUp, Telegram). Each run is isolated and queued within a time/token window. First job/buyer TODO.
 
 **Target Users**: ChatBot — small and mid-size online stores, first in underserved European markets (Baltic, Nordic, CEE) that need strong non-English support and GDPR-safe handling; buyers are founders and support leads. Hireable Agents — teams that want to hire an AI to own a repeatable job (first buyer/job TODO).

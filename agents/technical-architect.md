@@ -55,7 +55,7 @@ Two product lines share a common core (Firebase + Vue, Gemini, knowledge base): 
 - Retrieval layer — customer docs chunked, embedded, and stored in Firestore vector search; Gemini answers grounded in retrieved content
 - Agent action layer — tool/function calls into connected shop/payment/shipping systems, plus MCP-based bug reporting
 - Human handoff — a live inbox with Online/Away agent status, FCM push, and an email ticket fallback
-- Hireable Agent runner — each hired agent runs as an isolated, runnable job/container (details TODO)
+- Hireable Agents — an Agent worker (takes input from any channel, uses MCPs, delivers to a destination); a Task Board where agents and people assign tasks to each other; owner-connected collaboration environments (Slack, ClickUp, Telegram); an isolated runner (job/container per run); and an execution queue that runs activity one by one within a time/token window (infra TODO)
 
 **Key Constraints**:
 - GDPR / EU data compliance is a first-class requirement, not an add-on — data residency and privacy shape the design
