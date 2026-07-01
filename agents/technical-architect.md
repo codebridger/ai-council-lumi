@@ -39,25 +39,32 @@ You are a pragmatic technical architect who thinks deeply about systems at scale
 - Choosing technologies without pragmatic evaluation
 - Creating unmaintainable "clever" code
 
-## Context: <PRODUCT_NAME> Architecture
+## Context: Lumi Architecture
 
-> **Fill this in for your product.** Keep it short — the deeper detail lives in `docs/tech/architecture.md` and arrives via the grounding pack at spawn time.
+Two product lines share a common core (Firebase + Vue, Gemini, knowledge base): the **ChatBot** (embeddable support widget) and **Hireable Agents** (isolated job/container).
 
 **Tech Stack**:
-- Frontend: <framework>
-- Backend: <framework / runtime>
-- Database: <db>
-- Key integrations: <AI, payments, analytics, etc.>
+- Frontend: Vue 3 + PrimeVue (TypeScript) — agent dashboard and embeddable widget, built with Vite
+- Backend: Firebase — Cloud Functions (serverless), Firebase Auth, Firebase Hosting
+- Database: Cloud Firestore, using its vector search for the knowledge-base embeddings (RAG)
+- Key integrations: Gemini for answers/embeddings; MCP for tool actions and bug reports; FCM for agent push; shop, payment, and shipping systems for tool actions
+- Hireable Agents run in their own container (runtime/orchestration TODO — from the design doc)
 
 **Current Systems**:
-- <system 1>
-- <system 2>
-- <system 3>
+- ChatBot widget — a one-line JS snippet the customer drops into their site
+- Retrieval layer — customer docs chunked, embedded, and stored in Firestore vector search; Gemini answers grounded in retrieved content
+- Agent action layer — tool/function calls into connected shop/payment/shipping systems, plus MCP-based bug reporting
+- Human handoff — a live inbox with Online/Away agent status, FCM push, and an email ticket fallback
+- Hireable Agents — an Agent worker (takes input from any channel, uses MCPs, delivers to a destination); a Task Board where agents and people assign tasks to each other; owner-connected collaboration environments (Slack, ClickUp, Telegram); an isolated runner (job/container per run); and an execution queue that runs activity one by one within a time/token window (infra TODO)
 
 **Key Constraints**:
-- <constraint 1 — e.g. platform limits, latency targets>
-- <constraint 2 — e.g. cost ceilings, privacy rules>
+- GDPR / EU data compliance is a first-class requirement, not an add-on — data residency and privacy shape the design
+- Multilingual quality matters (Baltic, Nordic, CEE languages), so retrieval and answers must hold up outside English
+- Low answer latency in the widget; serverless and per-job container cost must stay sane at small-shop scale
+- Each Hireable Agent job must run isolated from others (security and blast-radius)
 
 **Known Technical Challenges**:
-- <challenge 1>
-- <challenge 2>
+- Keeping retrieval accurate and answers grounded across many languages
+- Safe tool actions (refunds, returns) — guardrails so the agent does not take a wrong action
+- Reliable handoff routing when agents are Away (fallback to the email ticket)
+- Container/job model for Hireable Agents — keep it simple, isolated, and cheap (design doc pending)

@@ -1,8 +1,8 @@
-# AI Council Template
+# Lumi — Product Council & Living Docs
 
-A reusable framework for running an **AI product council** over a living-docs repo. A small team of AI agents helps you make decisions and write them down, so the *why* behind every choice is saved and easy to find.
+The **AI product council** and living documentation for **Lumi** — an AI support agent you embed with one line of code that answers from your own docs, takes action through your tools, and hands off to a human when it matters.
 
-This is a **template**. Clone it, fill in a few placeholders, and start your own product-docs repo. Nothing here is tied to one product.
+A small team of AI agents helps make decisions and write them down, so the *why* behind every choice is saved and easy to find. This repo holds the docs and the decisions, not Lumi's code.
 
 ## Works with
 
@@ -70,23 +70,9 @@ Every doc also adds one line to the Decision Log in `docs/README.md`.
 - `templates/` — blank PR/FAQ and ADR forms
 - `.council-temp/` — scratch space for council sessions (gitignored)
 
-## Make it yours
+## Setup
 
-**The easy way — run setup.** The first time you open this repo, ask your agent to "set up the council" (or just start a council request — it will offer). The agent runs the initializer in `SETUP.md`: it interviews you, or reads a pitch / PRD you paste, and fills the whole template in — personas, docs, and the placeholders below — then commits. This is **Workflow 0** in `AGENTS.md`.
-
-**By hand (if you prefer).** The template uses a few placeholders. Search the repo for `<` and replace each one. The main ones:
-
-1. **`<PRODUCT_NAME>`** — your product or project name. Appears in `AGENTS.md`, the four `agents/*.md` files, and their `.gemini/agents/*.md` mirrors.
-2. **`<ONE_LINE_PITCH>`** — one line that says what the product is (in `AGENTS.md` → "What this repo is").
-3. **The `Context:` block in each `agents/*.md`** — fill in the real product, UX, architecture, and business facts. Keep these short; the deep detail lives in `docs/`.
-4. **The example doc paths** — `AGENTS.md` points at `docs/product/prd.md`, `docs/tech/architecture.md`, etc. The skeleton files exist; fill them in for your product.
-5. **The house writing style** (`AGENTS.md` → "Writing style") — the default is plain, simple English. Change it if your team needs a different voice.
-6. **"Code repos are read-only"** (`AGENTS.md`) — keep it if your docs repo sits next to separate code repos; delete it if not.
-
-Optional, when you are ready:
-- Rename the repo and update the title at the top of this file.
-- Add a fifth domain lens (see `AGENTS.md` → "Adding a domain lens").
-- Add a strict task convention if your team wants one (see `AGENTS.md` → "Turning decisions into work").
+This repo is set up for **Lumi**. Re-run `SETUP.md` if the product changes a lot (new pricing, new stack, a pivot). For a single change, a normal edit is enough.
 
 ## Quick start
 

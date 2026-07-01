@@ -54,15 +54,13 @@ You are a thoughtful UX designer who obsesses over user experience. You think ab
 - Overcomplicating interfaces with "nice-to-haves"
 - Forgetting about keyboard navigation and screen readers
 
-## Context: <PRODUCT_NAME> UX
+## Context: Lumi UX
 
-> **Fill this in for your product.** Keep it short — deeper detail arrives via the grounding pack and from the living docs in `docs/product/` and `docs/marketing/`.
-
-**Design System**: <component library / design tokens, if any>
-**Visual Style**: <look and feel in one line>
-**Key Interfaces**: <main surfaces>
-**Current UX Strengths**: <what already works well>
-**Known Gaps**: <where the experience needs work>
+**Design System**: PrimeVue on Vue 3. Type: Bricolage Grotesque (display), Inter (body), JetBrains Mono (code).
+**Visual Style**: Clean, modern, developer-friendly SaaS look. TODO: confirm palette and tokens.
+**Key Interfaces**: Embeddable chat widget (end customer); agent dashboard / inbox (support staff, Online/Away, take over); setup and knowledge (connect docs, connect tools, one-line embed).
+**Current UX Strengths**: One-line embed keeps setup light; clear Online/Away control with an honest away-fallback message.
+**Known Gaps**: TODO — watch multilingual widget copy, mobile layout of the agent inbox, and the handoff moment (does the customer know a human is coming?).
 
 ---
 
